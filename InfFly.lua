@@ -2,11 +2,11 @@ g_ScriptTitle = "bot"
 g_ScriptInfo = "BOT"
 
 Run = false
-Permantent = false
+Permanent = false
 
 function OnKeyPress(key)
   if key == "space" then
-    if Permantent then
+    if Permanent then
       Run = not Run
     else
       Run = true
@@ -15,13 +15,13 @@ function OnKeyPress(key)
 end
 
 function OnKeyRelease(key)
-  if key == "space" and not Permantent then
+  if key == "space" and not Permanent then
     Run = false
   elseif key == "m" then
-    if Permantent then
-      Permantent = false
+    if Permanent then
+      Permanent = false
     else
-      Permantent = true
+      Permanent = true
     end
   end
 end

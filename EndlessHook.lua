@@ -11,16 +11,16 @@ Init = false
 LastX = 0
 LastY = 0
 Reset = false
-Permantent = false
+Permanent = false
 
 function OnKeyPress(key)
   if key == "mouse2" then
     Run = true
   elseif key == "k" then
-    if Permantent then
-      Permantent = false
+    if Permanent then
+      Permanent = false
     else
-      Permantent = true
+      Permanent = true
     end
   end
 end
@@ -32,7 +32,7 @@ function CanHook(ID)
 end
 
 function OnKeyRelease(key)
-  if key == "mouse2" and not Permantent then
+  if key == "mouse2" and not Permanent then
     Run = false
   end
 end
